@@ -74,7 +74,7 @@ Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
       child: ListTile(
         title: Text(record.name),
         trailing: Text(record.votes.toString()),
-        onTap: () => print(record),
+        onTap: () => record.reference.updateData({'votes': record.votes + 1}),
       ),
     ),
   );
