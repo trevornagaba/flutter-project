@@ -81,6 +81,12 @@ Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
   );
 }
 
+/*
+There is another way to solve this problem without using a transaction. In general terms, you would use a stream containing each 
+individual vote. Each vote would be represented by the number 1. The current displayed value for votes would then be the sum of the 
+values in the stream. In Firebase, you could (for example) use a collection to hold the votes and an aggregation query to sum them
+*/
+
 class Record {
   final String name;
   final int votes;
